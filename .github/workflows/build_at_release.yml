@@ -1,0 +1,29 @@
+name: Build document
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install requirements
+        run: |
+          wget https://github.com/jgm/pandoc/releases/download/3.1.12.2/pandoc-3.1.12.2-1-amd64.deb
+          sudo dpkg -i pandoc-3.1.12.2-1-amd64.deb
+          mkdir ~/.fonts
+          cp ./typst/fonts/*.otf ~/.fonts/
+      - uses: typst-community/setup-typst@v3
+      - name: Build using pandoc and typst
+        run: |
+          sh ./build.sh
+      - name: Add build to release
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload ${{ github.event.release.tag_name }} main.pdf
