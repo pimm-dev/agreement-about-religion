@@ -44,9 +44,9 @@
     header: [
       #text(size: 5pt)[
         #columns(2)[
-          #align(left)[종교에 관한 서약서, r1, 좌측]
+          #align(left)[종교에 관한 서약서, r1.1, 좌측]
           #colbreak()
-          #align(right)[종교에 관한 서약서, r1, 우측]
+          #align(right)[종교에 관한 서약서, r1.1, 우측]
         ]
       ]
     ]
@@ -55,7 +55,7 @@
   
   show heading.where(level: 1): it => [
     #set align(center)
-    #set text(size: 13pt, weight: "medium", fill: color.title)
+    #set text(size: 12pt, weight: "medium", fill: color.title)
     #it
     #set text(size: .5em)
     #linebreak()
@@ -63,7 +63,7 @@
 
   show heading.where(level: 2): it => [
     #set align(center)
-    #set text(size: 10pt, weight: "regular", fill: color.title)
+    #set text(size: 8pt, weight: "regular", fill: color.title)
     #it
     #set text(size: .4em)
     #linebreak()
