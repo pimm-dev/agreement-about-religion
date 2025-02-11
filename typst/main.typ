@@ -1,4 +1,4 @@
-#let lead_manager = "박종현"
+#let lead_manager = "정영도"
 
 #let color = (
   title: rgb("#000"),
