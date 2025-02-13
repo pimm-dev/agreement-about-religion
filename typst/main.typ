@@ -1,4 +1,5 @@
 #let lead_manager = "정영도"
+#let rev = "1.2"
 
 #let color = (
   title: rgb("#000"),
@@ -18,7 +19,7 @@
   ]
   linebreak()
   align(center)[
-    #text(size: 7pt)[
+    #text(size: 6pt)[
       #grid(
         columns: 3,
         inset: (x: 4pt),
@@ -44,9 +45,9 @@
     header: [
       #text(size: 5pt)[
         #columns(2)[
-          #align(left)[종교에 관한 서약서, r1.1, 좌측]
+          #align(left)[종교에 관한 서약서, r#rev, 좌측]
           #colbreak()
-          #align(right)[종교에 관한 서약서, r1.1, 우측]
+          #align(right)[종교에 관한 서약서, r#rev, 우측]
         ]
       ]
     ]
