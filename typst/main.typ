@@ -1,4 +1,4 @@
-#let lead_manager = "정영도"
+#let lead_manager = "심민혁"
 #let rev = "1.2"
 
 #let color = (
